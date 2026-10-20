@@ -8,7 +8,8 @@ public class waterHeatCapacity {
         double initialTemp = scanner.nextDouble();
         System.out.print("Enter the final temperature in Fahrenheit: ");
         double finalTemp = scanner.nextDouble();
-        double heatEnergy = mass * 4184 * (finalTemp - initialTemp);
+        double tempChange = (finalTemp - 32) * 5 / 9 - (initialTemp - 32) * 5 / 9;
+        double heatEnergy = mass * 4184 * tempChange;
         System.out.println("The heat energy required is: " + heatEnergy );
         scanner.close();
     }
